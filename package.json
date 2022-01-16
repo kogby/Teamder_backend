@@ -21,6 +21,6 @@
     "@babel/preset-env": "^7.16.5"
   },
   "scripts": {
-    "server": "nodemon main.js --ext js --exec babel-node"
+    "start": "nodemon main.js --ext js --exec babel-node"
   }
 }
