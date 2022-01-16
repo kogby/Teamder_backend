@@ -10,6 +10,7 @@ const createNewUser = async(email,name,passward,fbLink)=>{
         newUser.save();
     }
     catch(e){
+        res.status(403).send({message: "error"});
         throw new Error("Database create user error " + e);
     }
 }
