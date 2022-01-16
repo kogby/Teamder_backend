@@ -5,7 +5,7 @@ const router = express.Router();
 router.post('/createComment', async(req,res) => {
   try{
     const newComment = new Comment({
-      requestId: req.body.requestId, userId: req.body.userId, 
+      requestId: req.body.requestId, userId: req.body.myId, 
       content: req.body.content
     })
     console.log("Created New Comment", newComment);
@@ -13,7 +13,7 @@ router.post('/createComment', async(req,res) => {
     res.status(200).send({message: "success"});
   }
   catch(e){
-    res,status(403).send({message: "create comment eroor"});
+    res,status(403).send({message: "create comment error"});
   }
 })
 
